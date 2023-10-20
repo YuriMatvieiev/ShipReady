@@ -1,0 +1,158 @@
+//====================================================================================================
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #d1d1d1;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  // .header__logo
+  &__logo {
+    font-family: "Conthrax";
+    @include adaptiveValue("font-size", 28, 16);
+    line-height: 120%;
+    font-weight: 600;
+    padding: 7px 13px;
+    border-radius: 6px;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    display: block;
+    span {
+      color: #f1a239;
+    }
+  }
+  // .header__right
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: $mobileSmall) {
+      gap: 16px;
+    }
+  }
+  // .header__nav
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    li {
+      a {
+        font-size: toRem(14);
+        line-height: 140%;
+        font-weight: 500;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  // .header__button
+  &__button {
+    @media (max-width: $mobile) {
+      padding: 12px 12px;
+    }
+  }
+  &__menu {
+    display: none;
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+}
+.menu {
+  &__body {
+    @media (max-width: $mobile) {
+      display: none;
+      position: absolute;
+      @include adaptiveValue("top", 67, 61, 0, 767.98, 375);
+      right: 0;
+      background-color: #fff;
+      z-index: 5;
+      width: 100%;
+      .header__nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 30px;
+        width: 100%;
+      }
+      .menu__item {
+        border-bottom: 1px solid #d1d1d1;
+        width: 100%;
+      }
+      .menu__link {
+        font-size: toRem(24);
+        display: block;
+      }
+    }
+  }
+}
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: toRem(24);
+    height: toRem(18);
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+      width: 80%;
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.menu-open {
+  .menu__body {
+    display: flex;
+  }
+}
