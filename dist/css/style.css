@@ -35,6 +35,18 @@
   display: block;
 }
 
+._icon-location-pin:before {
+  content: "\e901";
+}
+
+._icon-check-badge:before {
+  content: "\e902";
+}
+
+._icon-banknotes:before {
+  content: "\e900";
+}
+
 ._icon-star:before {
   content: "\e908";
 }
@@ -785,6 +797,190 @@ h6 {
   border: 1px solid #fcecd7;
 }
 
+.upwork {
+  background: #161414;
+  padding-top: 5.625rem;
+  padding-bottom: 3.125rem;
+}
+
+.upwork__title {
+  color: #fff;
+  font-weight: 600;
+  line-height: 120%;
+  font-family: "Conthrax";
+  text-align: center;
+  max-width: 1040px;
+  margin: 0 auto 16px;
+}
+
+.upwork__desc {
+  color: #fff;
+  line-height: 150%;
+  margin-bottom: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  text-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.upwork__desc::before {
+  font-size: 1.5rem;
+  color: #f1a239;
+}
+
+.upwork__desc span {
+  color: #f1a239;
+  font-weight: 600;
+}
+
+.upwork__profile {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 1rem;
+  gap: 30px;
+}
+
+.upwork__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.upwork__info-img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.upwork__info-name {
+  line-height: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.upwork__info-name::before {
+  color: #2c59bc;
+  font-size: 1.5rem;
+}
+
+.upwork__info-location {
+  font-weight: 600;
+  color: #616c57;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.upwork__info-location::before {
+  font-size: 1.5rem;
+  color: #616c57;
+}
+
+.upwork__info-bages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upwork__info-bages li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.upwork__info-bages li img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.upwork__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.upwork__stats-number {
+  font-size: 1.4375rem;
+  line-height: 104%;
+  font-weight: 600;
+}
+
+.upwork__stats-text {
+  color: #616c57;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.upwork__link {
+  font-family: "Conthrax";
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  display: block;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  padding: 30px;
+  width: 100%;
+  line-height: 120%;
+}
+
 @media (min-width: 76.875em) {
   .header__logo {
     font-size: 1.75rem;
@@ -840,6 +1036,22 @@ h6 {
 
   .pricing__title {
     font-size: 2.0625rem;
+  }
+
+  .upwork__title {
+    font-size: 2.0625rem;
+  }
+
+  .upwork__desc {
+    font-size: 1rem;
+  }
+
+  .upwork__info-name {
+    font-size: 2.25rem;
+  }
+
+  .upwork__link {
+    font-size: 1.5rem;
   }
 }
 
@@ -903,6 +1115,21 @@ h6 {
 
   .testimonials__items-row:last-child .testimonials__item {
     width: calc(50% - 10px);
+  }
+
+  .upwork__profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+
+  .upwork__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 24px;
   }
 }
 
@@ -1126,6 +1353,33 @@ h6 {
   .pricing__list {
     margin-bottom: 1rem;
   }
+
+  .upwork {
+    padding-top: 3.125rem;
+  }
+
+  .upwork__profile {
+    padding: 20px 16px;
+  }
+
+  .upwork__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .upwork__info-name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .upwork__info-location {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 23.4375em) {
@@ -1163,6 +1417,30 @@ h6 {
 
   .pricing__item {
     padding: 24px;
+  }
+
+  .upwork__desc::before {
+    font-size: 1.125rem;
+  }
+
+  .upwork__info-bages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+
+  .upwork__stats {
+    gap: 20px;
+  }
+
+  .upwork__stats-text {
+    font-size: 0.875rem;
+  }
+
+  .upwork__link {
+    padding: 20px;
   }
 }
 
@@ -1221,6 +1499,22 @@ h6 {
 
   .pricing__title {
     font-size: 1.5rem;
+  }
+
+  .upwork__title {
+    font-size: 1.5rem;
+  }
+
+  .upwork__desc {
+    font-size: 0.875rem;
+  }
+
+  .upwork__info-name {
+    font-size: 1.5rem;
+  }
+
+  .upwork__link {
+    font-size: 1.25rem;
   }
 }
 
@@ -1392,6 +1686,54 @@ h6 {
       font-size: calc(1.5rem + 0.5625 * (100vw - 23.4375rem) / 53.4375);
     }
 }
+
+@supports (font-size: clamp( 1.5rem , 1.2532894737rem  +  1.0526315789vw , 2.0625rem )) {
+    .upwork__title {
+      font-size: clamp( 1.5rem , 1.2532894737rem  +  1.0526315789vw , 2.0625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.2532894737rem  +  1.0526315789vw , 2.0625rem )) {
+    .upwork__title {
+      font-size: calc(1.5rem + 0.5625 * (100vw - 23.4375rem) / 53.4375);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8201754386rem  +  0.2339181287vw , 1rem )) {
+    .upwork__desc {
+      font-size: clamp( 0.875rem , 0.8201754386rem  +  0.2339181287vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8201754386rem  +  0.2339181287vw , 1rem )) {
+    .upwork__desc {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 53.4375);
+    }
+}
+
+@supports (font-size: clamp( 1.5rem , 1.1710526316rem  +  1.4035087719vw , 2.25rem )) {
+    .upwork__info-name {
+      font-size: clamp( 1.5rem , 1.1710526316rem  +  1.4035087719vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.1710526316rem  +  1.4035087719vw , 2.25rem )) {
+    .upwork__info-name {
+      font-size: calc(1.5rem + 0.75 * (100vw - 23.4375rem) / 53.4375);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.1403508772rem  +  0.4678362573vw , 1.5rem )) {
+    .upwork__link {
+      font-size: clamp( 1.25rem , 1.1403508772rem  +  0.4678362573vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.1403508772rem  +  0.4678362573vw , 1.5rem )) {
+    .upwork__link {
+      font-size: calc(1.25rem + 0.25 * (100vw - 23.4375rem) / 53.4375);
+    }
+}
 }
 
 @media (max-width: 47.99875em) and (min-width: 47.99875em) {
@@ -1453,5 +1795,9 @@ h6 {
 
   .features-tabs__title:hover {
     font-weight: 600;
+  }
+
+  .upwork__link:hover {
+    color: #f1a239;
   }
 }

@@ -602,3 +602,203 @@
     border: 1px solid #fcecd7;
   }
 }
+
+//========================================================================================================================================================
+
+.upwork {
+  background: #161414;
+  padding-top: toRem(90);
+  padding-bottom: toRem(50);
+  @media (max-width: $mobile) {
+    padding-top: toRem(50);
+  }
+  // .upwork__container
+  &__container {
+  }
+  // .upwork__title
+  &__title {
+    color: #fff;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 33, 24);
+    line-height: 120%;
+    font-family: "Conthrax";
+    text-align: center;
+    max-width: 1040px;
+    margin: 0 auto 16px;
+  }
+  // .upwork__desc
+  &__desc {
+    color: #fff;
+    line-height: 150%;
+    margin-bottom: toRem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    @include adaptiveValue("font-size", 16, 14);
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+    &::before {
+      font-size: toRem(24);
+      color: #f1a239;
+      @media (max-width: $mobileSmall) {
+        font-size: toRem(18);
+      }
+    }
+    span {
+      color: #f1a239;
+      font-weight: 600;
+    }
+  }
+  // .upwork__profile
+  &__profile {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: toRem(16);
+    gap: 30px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      padding: 20px 16px;
+    }
+  }
+  // .upwork__info
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @media (max-width: $tablet) {
+      justify-content: center;
+      gap: 24px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .upwork__info-img
+  &__info-img {
+    width: toRem(88);
+    height: toRem(88);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  // .upwork__info-text
+  &__info-text {
+  }
+  // .upwork__info-name
+  &__info-name {
+    @include adaptiveValue("font-size", 36, 24);
+    line-height: 66%;
+    display: flex;
+    gap: 12px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    margin-bottom: toRem(20);
+    &::before {
+      color: #2c59bc;
+      font-size: toRem(24);
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+  }
+  // .upwork__info-location
+  &__info-location {
+    font-weight: 600;
+    color: #616c57;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-bottom: toRem(24);
+    &::before {
+      font-size: toRem(24);
+      color: #616c57;
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+  }
+  // .upwork__info-bages
+  &__info-bages {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      gap: 8px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      line-height: 150%;
+      img {
+        width: toRem(30);
+        height: toRem(30);
+      }
+    }
+  }
+  // .upwork__stats
+  &__stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    @media (max-width: $mobileSmall) {
+      gap: 20px;
+    }
+  }
+  // .upwork__stats-number
+  &__stats-number {
+    font-size: toRem(23);
+    line-height: 104%;
+    font-weight: 600;
+  }
+  // .upwork__stats-text
+  &__stats-text {
+    color: #616c57;
+    font-weight: 600;
+    line-height: 150%;
+    @media (max-width: $mobileSmall) {
+      font-size: toRem(14);
+    }
+  }
+  // .upwork__link
+  &__link {
+    font-family: "Conthrax";
+    text-align: center;
+    color: #fff;
+    @include adaptiveValue("font-size", 24, 20);
+    font-weight: 600;
+    text-decoration: underline;
+    display: block;
+    transition: color 0.3s;
+    padding: 30px;
+    width: 100%;
+    line-height: 120%;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #f1a239;
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 20px;
+    }
+  }
+  // ._icon-banknotes
+  &_icon-banknotes {
+  }
+  // ._icon-check-badge
+  &_icon-check-badge {
+  }
+  // ._icon-location-pin
+  &_icon-location-pin {
+  }
+}

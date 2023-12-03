@@ -14,6 +14,15 @@
     display: block;
   }
 }
+._icon-location-pin:before {
+  content: "\e901";
+}
+._icon-check-badge:before {
+  content: "\e902";
+}
+._icon-banknotes:before {
+  content: "\e900";
+}
 ._icon-star:before {
   content: "\e908";
 }
